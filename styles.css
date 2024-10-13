@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+body.dark-mode .container {
+  background: #444;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.controls label {
+  display: block;
+  margin-top: 10px;
+}
+
+.controls input[type="number"], .controls input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.output input {
+  width: 100%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.strength-bar {
+  height: 10px;
+  margin-top: 10px;
+  background-color: #ccc;
+}
+
+#password-history {
+  list-style-type: none;
+  padding: 0;
+}
+
+#password-history li {
+  background: #f4f4f4;
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+body.dark-mode #password-history li {
+  background: #555;
+}
+
+#password-history li button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode button {
+  background-color: #1a73e8;
+}
+
+body.dark-mode button:hover {
+  background-color: #004ba0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body.dark-mode .modal-content {
+  background-color: #444;
+  color: white;
+}
+
+.templates, .export {
+  margin-top: 20px;
+  text-align: center;
+}

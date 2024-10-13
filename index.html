@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Üretici</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Şifre Üretici</h1>
+        <div class="controls">
+            <label for="password-length">Şifre Uzunluğu:</label>
+            <input type="number" id="password-length" value="12" min="4" max="64">
+            
+            <label>
+                <input type="checkbox" id="include-lowercase" checked>
+                Küçük Harfler
+            </label>
+            <label>
+                <input type="checkbox" id="include-uppercase" checked>
+                Büyük Harfler
+            </label>
+            <label>
+                <input type="checkbox" id="include-numbers" checked>
+                Rakamlar
+            </label>
+            <label>
+                <input type="checkbox" id="include-symbols" checked>
+                Semboller
+            </label>
+            
+            <label for="custom-characters">Özel Karakterler:</label>
+            <input type="text" id="custom-characters">
+            
+            <button id="generate-password">Şifre Üret</button>
+            <button id="clear-password">Temizle</button>
+            <button id="toggle-theme">Karanlık Mod</button>
+            <button id="start-auto-generate">Otomatik Şifre Üret</button>
+            <button id="stop-auto-generate">Otomatik Üretmeyi Durdur</button>
+        </div>
+        
+        <div class="output">
+            <input type="text" id="password-output" readonly>
+            <button id="copy-password">Kopyala</button>
+        </div>
+        
+        <div class="strength-bar" id="strength-bar"></div>
+        <div class="strength-text" id="strength-text"></div>
+        
+        <h2>Şifre Güvenliği İpuçları</h2>
+        <ul id="security-tips">
+            <li>Şifrenizi en az 12 karakter uzunluğunda yapın.</li>
+            <li>Küçük harfler, büyük harfler, rakamlar ve semboller kullanın.</li>
+            <li>Kolay tahmin edilebilecek bilgiler kullanmayın.</li>
+        </ul>
+        
+        <div class="templates">
+            <h2>Şifre Oluşturma Şablonları</h2>
+            <button id="template1">Kolay Şifre</button>
+            <button id="template2">Orta Zorlukta Şifre</button>
+            <button id="template3">Zor Şifre</button>
+        </div>
+
+        <div class="export">
+            <button id="export-txt">TXT Olarak Kaydet</button>
+            <button id="export-csv">CSV Olarak Kaydet</button>
+        </div>
+        
+        <h2>Şifre Geçmişi</h2>
+        <ul id="password-history"></ul>
+        <button id="clear-history">Geçmişi Temizle</button>
+    </div>
+
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <h2>Geri Bildirim</h2>
+            <textarea id="feedback-input" rows="4" placeholder="Geri bildiriminizi buraya yazın..."></textarea>
+            <button id="submit-feedback">Gönder</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
